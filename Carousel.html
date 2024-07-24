@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Continuous Carousel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .logo-carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .logo-carousel-track {
+      display: flex;
+      animation: logo-scroll 15s linear infinite;
+    }
+    .logo-carousel-item {
+      min-width: 33.33%;
+      box-sizing: border-box;
+      padding: 10px;
+      flex-shrink: 0;
+    }
+    .logo-carousel-item img {
+      width: 100%;
+      height: auto;
+      max-height: 150px;
+      object-fit: contain;
+    }
+    .logo-carousel-title {
+      margin-bottom: 20px;
+    }
+    @keyframes logo-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <h2 class="logo-carousel-title">Trusted by the world's most innovative teams</h2>
+  <div class="logo-carousel-container">
+    <div class="logo-carousel-track">
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Tesla" alt="Tesla"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Toyota" alt="Toyota"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Aston Martn" alt="Aston Martn"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Ferrari" alt="Ferrari"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Mazda" alt="Mazda"></div>
+      <!-- Duplicate items to create a seamless loop -->
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Tesla" alt="Tesla"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Toyota" alt="Toyota"></div>
+      <div class="logo-carousel-item"><img src="https://via.placeholder.com/150x150?text=Aston Martn" alt="Aston Martn"></div>
+    </div>
+  </div>
+</body>
+</html>
